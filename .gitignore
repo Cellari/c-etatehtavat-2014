@@ -27,3 +27,6 @@
 *.i*86
 *.x86_64
 *.hex
+/Etaprojekti2014/nbproject/private/
+/Etaprojekti2014/build/Debug/
+/Etaprojekti2014/dist/Debug/
