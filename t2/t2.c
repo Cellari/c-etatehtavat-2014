@@ -12,14 +12,35 @@
  * 
  */
 int main(int argc, char** argv) {
-    int i;
+    char ch;
+    FILE *source, *target;
     
-    if(argc != 2) {
+    if(argc != 3) {
         printf("Usage: t2 [source] [destination]\n");
         printf("\nCopies source file to destination\n");
     }
     else {
+        source = fopen(argv[1], "r");
+        if(source == NULL) {
+            printf("No file found. Terminating session\n");
+            exit(EXIT_FAILURE);
+        }
         
+        target = fopen(argv[2], "w");
+        if( target == NULL )
+        {
+           fclose(source);
+           printf("Invalid destination. Terminating session\n");
+           exit(EXIT_FAILURE);
+        }
+        
+        while( ( ch = fgetc(source) ) != EOF )
+            fputc(ch, target);
+        
+        printf("File copied successfully.\n");
+ 
+        fclose(source);
+        fclose(target);
     }
     
     return (EXIT_SUCCESS);
