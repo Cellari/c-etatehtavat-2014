@@ -1,6 +1,6 @@
 /* 
  * File:   t2.c
- * Author: user
+ * Author: Ari Suoyrjö
  *
  * Created on September 18, 2014, 7:05 PM
  */
