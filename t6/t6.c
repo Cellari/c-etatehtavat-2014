@@ -1,6 +1,6 @@
 /* 
  * File:   t6.c
- * Author: user
+ * Author: Ari Suoyrjö
  *
  * Created on September 19, 2014, 2:42 PM
  */
